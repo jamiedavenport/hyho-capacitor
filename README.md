@@ -9,3 +9,7 @@ Have you heard of Capacitor?
 - Add tags to images
 - Find images that match a set of tags
 - Share an image with social media
+
+## Links
+
+- [Capacitor](https://capacitorjs.com/)
