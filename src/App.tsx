@@ -1,8 +1,9 @@
 import React from 'react';
+import PhotoUploadButton from './components/PhotoUploadButton';
 
 function App() {
   return (
-    <div>Hello, World</div>
+    <PhotoUploadButton />
   );
 }
 
