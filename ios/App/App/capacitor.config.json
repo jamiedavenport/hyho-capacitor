@@ -1,0 +1,13 @@
+{
+  "appId": "dev.hyho.capacitor",
+  "appName": "hyho-capacitor",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "public",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
