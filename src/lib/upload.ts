@@ -24,10 +24,12 @@ export const choosePhoto = async (): Promise<string> => {
       webUseInput: true,
     });
 
-    if (typeof image.path === "undefined") {
+    const path = image.path ?? image.webPath;
+
+    if (typeof path === "undefined") {
       throw new Error("Image path was undefined");
     }
 
-    return image.path;
+    return path;
   }
 };
