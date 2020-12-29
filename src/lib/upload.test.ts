@@ -17,20 +17,22 @@ describe("upload", () => {
       );
     });
 
-    it("should throw an error when the image path is missing", async () => {
+    it("should throw an error when the image data is missing", async () => {
       (Camera.getPhoto as jest.Mock).mockResolvedValueOnce({});
 
       await expect(choosePhoto()).rejects.toMatchInlineSnapshot(
-        `[Error: Image path was undefined]`
+        `[Error: Image data was undefined]`
       );
     });
 
-    it("should return a photo path", async () => {
-      const path = "tmp/lkjhbjnkjihubjjnkijhuj/img.jpg";
+    it("should return a photo data", async () => {
+      const data = "knjhgcfhbjuhigyftghvjiuygtghu76tyrfcghbjiouytfcghbjkiuhgyt";
 
-      (Camera.getPhoto as jest.Mock).mockResolvedValueOnce({ path });
+      (Camera.getPhoto as jest.Mock).mockResolvedValueOnce({
+        base64String: data,
+      });
 
-      expect(await choosePhoto()).toBe(path);
+      expect(await choosePhoto()).toBe(data);
     });
   });
 });

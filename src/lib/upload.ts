@@ -17,19 +17,19 @@ export const choosePhoto = async (): Promise<string> => {
       source: CameraSource.Photos,
       quality: 90,
       allowEditing: false,
-      resultType: CameraResultType.Uri,
+      resultType: CameraResultType.Base64,
       preserveAspectRatio: true,
       width: 100,
       height: 100,
       webUseInput: true,
     });
 
-    const path = image.path ?? image.webPath;
+    const data = image.base64String;
 
-    if (typeof path === "undefined") {
-      throw new Error("Image path was undefined");
+    if (typeof data === "undefined") {
+      throw new Error("Image data was undefined");
     }
 
-    return path;
+    return data;
   }
 };
