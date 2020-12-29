@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { defineCustomElements } from "@ionic/pwa-elements/loader";
+import firebase from "firebase/app";
 
 import "./index.css";
 
@@ -20,3 +21,12 @@ reportWebVitals();
 
 // Add @ionic/pwa-elements so that certail plugins work
 defineCustomElements(window);
+
+firebase.initializeApp({
+  apiKey: "AIzaSyAJP8rLlsdwV7yIMlwefIKth3eLy-EblAw",
+  authDomain: "hyho-capacitor.firebaseapp.com",
+  projectId: "hyho-capacitor",
+  storageBucket: "hyho-capacitor.appspot.com",
+  messagingSenderId: "901631595514",
+  appId: "1:901631595514:web:57b6a6148f216b94e64a43",
+});
